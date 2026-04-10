@@ -24,7 +24,6 @@
             background: var(--bg);
             color: var(--text);
             min-height: 100vh;
-            padding: 0;
         }
         .hero {
             background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #1a1a2e 100%);
@@ -40,38 +39,17 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
-        .hero .subtitle {
-            color: var(--muted);
-            font-size: 1rem;
-        }
-        .hero .last-updated {
-            color: var(--muted);
-            font-size: 0.8rem;
-            margin-top: 0.75rem;
-            opacity: 0.7;
-        }
+        .hero .subtitle { color: var(--muted); font-size: 1rem; }
+        .hero .last-updated { color: var(--muted); font-size: 0.8rem; margin-top: 0.75rem; opacity: 0.7; }
 
         .itinerary-bar {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            padding: 1.5rem 1rem;
-            overflow-x: auto;
-            flex-wrap: wrap;
+            display: flex; justify-content: center; gap: 0;
+            padding: 1.5rem 1rem; overflow-x: auto; flex-wrap: wrap;
         }
-        .itin-step {
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
+        .itin-step { display: flex; align-items: center; }
         .itin-dot {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 0.6rem 1rem;
-            font-size: 0.8rem;
-            text-align: center;
-            min-width: 110px;
+            background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+            padding: 0.6rem 1rem; font-size: 0.8rem; text-align: center; min-width: 110px;
         }
         .itin-dot .date { color: var(--accent); font-weight: 600; font-size: 0.75rem; }
         .itin-dot .place { color: var(--text); margin-top: 2px; }
@@ -80,202 +58,101 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem 3rem; }
 
         .section-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 2rem 0 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 1.25rem; font-weight: 600; margin: 2rem 0 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
         }
         .section-title .icon { font-size: 1.4rem; }
+        .sub-section-title {
+            font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem;
+            color: var(--muted); display: flex; align-items: center; gap: 0.5rem;
+        }
+        .sub-section-title.nonstop { color: var(--green); }
+        .sub-section-title.connecting { color: var(--orange); }
 
-        /* Top Picks */
+        /* Picks */
         .picks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1rem; margin-bottom: 2rem;
         }
         .pick-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            position: relative;
-            transition: transform 0.2s, border-color 0.2s;
+            background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+            padding: 1.5rem; position: relative; transition: transform 0.2s, border-color 0.2s;
         }
         .pick-card:hover { transform: translateY(-2px); border-color: var(--accent); }
         .pick-card.recommended { border-color: var(--gold); }
         .pick-badge {
-            position: absolute;
-            top: -10px;
-            right: 16px;
-            background: var(--gold);
-            color: #0f172a;
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 20px;
-            text-transform: uppercase;
+            position: absolute; top: -10px; right: 16px; background: var(--gold); color: #0f172a;
+            font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase;
         }
         .pick-card h3 { font-size: 1rem; margin-bottom: 0.75rem; color: var(--accent); }
-        .pick-total {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
+        .pick-total { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
         .pick-total span { font-size: 0.9rem; color: var(--muted); font-weight: 400; }
-        .pick-leg {
-            background: rgba(0,0,0,0.2);
-            border-radius: 10px;
-            padding: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-        .pick-leg .route {
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.25rem;
-        }
-        .pick-leg .details {
-            font-size: 0.8rem;
-            color: var(--muted);
-            line-height: 1.5;
-        }
-        .pick-leg .price-tag {
-            float: right;
-            color: var(--green);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
+        .pick-leg { background: rgba(0,0,0,0.2); border-radius: 10px; padding: 0.75rem; margin-bottom: 0.5rem; }
+        .pick-leg .route { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .pick-leg .details { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+        .pick-leg .price-tag { float: right; color: var(--green); font-weight: 600; font-size: 0.95rem; }
 
-        /* Cabin toggle */
-        .toggle-bar {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
+        /* Filter bars */
+        .filter-row { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+        .filter-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-right: 0.25rem; }
+        .filter-btn {
+            padding: 0.4rem 1rem; border-radius: 8px; border: 1px solid var(--border);
+            background: var(--card); color: var(--text); cursor: pointer; font-size: 0.8rem; transition: all 0.2s;
         }
-        .toggle-btn {
-            padding: 0.5rem 1.25rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--card);
-            color: var(--text);
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-        .toggle-btn.active {
-            background: var(--accent);
-            color: var(--bg);
-            border-color: var(--accent);
-            font-weight: 600;
-        }
+        .filter-btn:hover { border-color: var(--accent); }
+        .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+        .filter-sep { width: 1px; height: 24px; background: var(--border); margin: 0 0.5rem; }
 
-        /* Flight tables */
+        /* Tables */
+        .flight-group { margin-bottom: 1.5rem; }
+        .flight-group.hidden { display: none; }
         .flight-table-wrap {
-            overflow-x: auto;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            margin-bottom: 1.5rem;
+            overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 0.5rem;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.85rem;
-        }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
         thead th {
-            background: rgba(0,0,0,0.3);
-            padding: 0.75rem 1rem;
-            text-align: left;
-            font-weight: 600;
-            color: var(--muted);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
+            background: rgba(0,0,0,0.3); padding: 0.75rem 1rem; text-align: left;
+            font-weight: 600; color: var(--muted); font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
         }
-        tbody tr {
-            border-top: 1px solid var(--border);
-            transition: background 0.15s;
-        }
+        tbody tr { border-top: 1px solid var(--border); transition: background 0.15s; }
         tbody tr:hover { background: var(--card-hover); }
-        tbody td {
-            padding: 0.75rem 1rem;
-            white-space: nowrap;
-        }
-        .price-cell {
-            font-weight: 700;
-            color: var(--green);
-            font-size: 1rem;
-        }
+        tbody tr.hidden { display: none; }
+        tbody td { padding: 0.75rem 1rem; white-space: nowrap; }
+        .price-cell { font-weight: 700; color: var(--green); font-size: 1rem; }
         .airline-badge {
-            display: inline-block;
-            background: rgba(56, 189, 248, 0.15);
-            color: var(--accent);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            display: inline-block; background: rgba(56, 189, 248, 0.15); color: var(--accent);
+            padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;
         }
-        .stops-badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
+        .stops-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
         .stops-0 { background: rgba(52, 211, 153, 0.15); color: var(--green); }
         .stops-1 { background: rgba(251, 191, 36, 0.15); color: var(--gold); }
         .stops-2 { background: rgba(251, 146, 60, 0.15); color: var(--orange); }
-        .stops-3 { background: rgba(248, 113, 113, 0.15); color: #f87171; }
 
-        .cabin-economy { display: block; }
-        .cabin-business { display: none; }
-        body.show-business .cabin-economy { display: none; }
-        body.show-business .cabin-business { display: block; }
+        .no-results { padding: 2rem; text-align: center; color: var(--muted); font-size: 0.9rem; }
 
-        .note-box {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-left: 3px solid var(--accent);
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            margin: 1.5rem 0;
-            font-size: 0.85rem;
-            line-height: 1.6;
-            color: var(--muted);
-        }
-        .note-box strong { color: var(--text); }
-
-        .comparison-bar {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
+        /* Stats */
+        .comparison-bar { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
         .comp-stat {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1rem 1.5rem;
-            text-align: center;
-            flex: 1;
-            min-width: 140px;
+            background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+            padding: 1rem 1.5rem; text-align: center; flex: 1; min-width: 140px;
         }
         .comp-stat .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
         .comp-stat .value { font-size: 1.5rem; font-weight: 700; margin-top: 0.25rem; }
         .comp-stat .value.eco { color: var(--green); }
         .comp-stat .value.biz { color: var(--accent2); }
 
+        .note-box {
+            background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+            border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.85rem;
+            line-height: 1.6; color: var(--muted);
+        }
+        .note-box strong { color: var(--text); }
+
         footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--muted);
-            font-size: 0.75rem;
+            text-align: center; padding: 2rem; color: var(--muted); font-size: 0.75rem;
             border-top: 1px solid var(--border);
         }
-
         @media (max-width: 600px) {
             .hero h1 { font-size: 1.4rem; }
             .picks-grid { grid-template-columns: 1fr; }
@@ -287,7 +164,7 @@
 <body>
     <div class="hero">
         <h1>Argentina & Uruguay Trip</h1>
-        <div class="subtitle">Dec 26, 2026 - Jan 8, 2027 | Flight Options Dashboard</div>
+        <div class="subtitle">Dec 26, 2026 &ndash; Jan 8, 2027 | Flight Options Dashboard</div>
         <div class="last-updated">Prices searched April 9, 2025 &mdash; refresh for latest</div>
     </div>
 
@@ -314,7 +191,6 @@
     </div>
 
     <div class="container">
-        <!-- Quick Stats -->
         <div class="comparison-bar">
             <div class="comp-stat">
                 <div class="label">Best Economy</div>
@@ -326,7 +202,7 @@
             </div>
             <div class="comp-stat">
                 <div class="label">Best Business</div>
-                <div class="value biz">$4,638</div>
+                <div class="value biz">$4,758</div>
             </div>
             <div class="comp-stat">
                 <div class="label">Best Biz w/ Nonstop</div>
@@ -338,17 +214,17 @@
             <strong>Key date insight:</strong> Shifting departure from 12/26 to <strong>12/28</strong> saves $60-200 on the outbound. For the return, <strong>Jan 8</strong> is significantly cheaper than Jan 5-7 to EWR. Flying back Jan 8 means 4 nights at VIK Playa, which fits nicely. In business, <strong>AA nonstop JFK&rarr;EZE</strong> on 12/26 or 12/28 at $2,434 is a standout.
         </div>
 
-        <!-- Cabin Toggle -->
-        <div class="toggle-bar">
-            <button class="toggle-btn active" onclick="setCabin('economy')">Economy</button>
-            <button class="toggle-btn" onclick="setCabin('business')">Business</button>
-        </div>
-
         <!-- ============ TOP PICKS ============ -->
         <div class="section-title"><span class="icon">&#9733;</span> Recommended Combos</div>
 
-        <!-- ECONOMY PICKS -->
-        <div class="cabin-economy">
+        <div class="filter-row">
+            <span class="filter-label">Cabin:</span>
+            <button class="filter-btn active" onclick="setCabin('economy')">Economy</button>
+            <button class="filter-btn" onclick="setCabin('business')">Business</button>
+        </div>
+
+        <!-- Economy Picks -->
+        <div id="picks-economy">
             <div class="picks-grid">
                 <div class="pick-card">
                     <h3>Budget Pick</h3>
@@ -390,19 +266,19 @@
             </div>
         </div>
 
-        <!-- BUSINESS PICKS -->
-        <div class="cabin-business">
+        <!-- Business Picks -->
+        <div id="picks-business" style="display:none;">
             <div class="picks-grid">
                 <div class="pick-card">
                     <h3>Best Business Value</h3>
-                    <div class="pick-total">$4,638 <span>/ person</span></div>
+                    <div class="pick-total">$4,758 <span>/ person</span></div>
                     <div class="pick-leg">
                         <div class="route">OUT: JFK &rarr; EZE <span class="price-tag">$2,304</span></div>
                         <div class="details">Dec 26 | Avianca via Medellin (1 stop)<br>Depart 6:15am &rarr; Arrive 1:35am+1</div>
                     </div>
                     <div class="pick-leg">
-                        <div class="route">BACK: MVD &rarr; EWR <span class="price-tag">$2,334</span></div>
-                        <div class="details">Jan 8 | 12:33pm LATAM via SCL + 11:10pm Delta ATL<br>Arrive 11:03am+1</div>
+                        <div class="route">BACK: MVD &rarr; JFK <span class="price-tag">$2,454</span></div>
+                        <div class="details">Jan 8 | LATAM via Lima<br>Depart 7:35am &rarr; Arrive 8:10pm same day</div>
                     </div>
                 </div>
                 <div class="pick-card recommended">
@@ -419,7 +295,7 @@
                     </div>
                 </div>
                 <div class="pick-card">
-                    <h3>All Nonstop Premium</h3>
+                    <h3>All Premium Nonstop</h3>
                     <div class="pick-total">$5,568 <span>/ person</span></div>
                     <div class="pick-leg">
                         <div class="route">OUT: JFK &rarr; EZE <span class="price-tag">$2,434</span></div>
@@ -427,498 +303,201 @@
                     </div>
                     <div class="pick-leg">
                         <div class="route">BACK: MVD &rarr; JFK <span class="price-tag">$3,134</span></div>
-                        <div class="details">Jan 8 | Copa via Panama to JFK<br>Depart 12:53am &rarr; Arrive 12:57pm same day</div>
+                        <div class="details">Jan 8 | Delta One via ATL<br>Depart 12:53am &rarr; Arrive 12:57pm</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ============ OUTBOUND FLIGHTS ============ -->
+        <!-- ============ OUTBOUND ============ -->
         <div class="section-title"><span class="icon">&#9992;</span> Outbound: NYC &rarr; Buenos Aires (EZE)</div>
 
-        <!-- Economy Outbound -->
-        <div class="cabin-economy">
-            <div class="flight-table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Price</th>
-                            <th>Route</th>
-                            <th>Airline</th>
-                            <th>Stops</th>
-                            <th>Depart</th>
-                            <th>Arrive</th>
-                            <th>Duration</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Dec 25</td>
-                            <td class="price-cell">$556</td>
-                            <td>EWR&rarr;SDQ&rarr;EZE</td>
-                            <td><span class="airline-badge">Arajet</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>11:00am</td>
-                            <td>3:23am+1</td>
-                            <td>~16h 23m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 27</td>
-                            <td class="price-cell">$556</td>
-                            <td>EWR&rarr;PUJ&rarr;EZE</td>
-                            <td><span class="airline-badge">Arajet</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>11:00am</td>
-                            <td>3:45am+1</td>
-                            <td>~16h 45m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$556</td>
-                            <td>EWR&rarr;SDQ&rarr;EZE</td>
-                            <td><span class="airline-badge">Arajet</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>11:00am</td>
-                            <td>3:23am+1</td>
-                            <td>~16h 23m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$693</td>
-                            <td>EWR&rarr;MIA&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>12:51pm</td>
-                            <td>7:25am+1</td>
-                            <td>~18h 34m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$693</td>
-                            <td>EWR&rarr;ATL&rarr;EZE</td>
-                            <td><span class="airline-badge">Delta</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>12:05pm</td>
-                            <td>7:20am+1</td>
-                            <td>~19h 15m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$693</td>
-                            <td>EWR&rarr;IAH&rarr;EZE</td>
-                            <td><span class="airline-badge">United</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>2:20pm</td>
-                            <td>7:20am+1</td>
-                            <td>~17h</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$693</td>
-                            <td>EWR&rarr;MIA&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>6:29pm</td>
-                            <td>10:15am+1</td>
-                            <td>~15h 46m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 25</td>
-                            <td class="price-cell">$753</td>
-                            <td>EWR&rarr;MIA&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>12:51pm</td>
-                            <td>7:25am+1</td>
-                            <td>~18h 34m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 27</td>
-                            <td class="price-cell">$753</td>
-                            <td>EWR&rarr;MIA&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>12:51pm</td>
-                            <td>7:25am+1</td>
-                            <td>~18h 34m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$689</td>
-                            <td>JFK&rarr;EZE (various)</td>
-                            <td><span class="airline-badge">Various</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>varies</td>
-                            <td>varies</td>
-                            <td>~14-18h</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="filter-row" id="out-filters">
+            <span class="filter-label">Date:</span>
+            <button class="filter-btn active" data-section="out" data-date="all" onclick="setDate('out','all',this)">All Dates</button>
+            <button class="filter-btn" data-section="out" data-date="Dec 25" onclick="setDate('out','Dec 25',this)">Dec 25</button>
+            <button class="filter-btn" data-section="out" data-date="Dec 26" onclick="setDate('out','Dec 26',this)">Dec 26</button>
+            <button class="filter-btn" data-section="out" data-date="Dec 27" onclick="setDate('out','Dec 27',this)">Dec 27</button>
+            <button class="filter-btn" data-section="out" data-date="Dec 28" onclick="setDate('out','Dec 28',this)">Dec 28</button>
+        </div>
+
+        <!-- ECONOMY OUTBOUND -->
+        <div id="out-economy">
+            <!-- Nonstop -->
+            <div class="sub-section-title nonstop">&#9679; Nonstop Flights</div>
+            <div class="flight-group" id="out-eco-nonstop">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Depart</th><th>Arrive</th><th>Duration</th></tr></thead>
+                        <tbody>
+                            <tr><td colspan="7" class="no-results">No nonstop economy flights found on these dates</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Connecting -->
+            <div class="sub-section-title connecting">&#9679; Connecting Flights</div>
+            <div class="flight-group" id="out-eco-connecting">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Stops</th><th>Depart</th><th>Arrive</th><th>Duration</th></tr></thead>
+                        <tbody>
+                            <tr data-date="Dec 25"><td>Dec 25</td><td class="price-cell">$556</td><td>EWR&rarr;SDQ&rarr;EZE</td><td><span class="airline-badge">Arajet</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>11:00am</td><td>3:23am+1</td><td>~16h 23m</td></tr>
+                            <tr data-date="Dec 25"><td>Dec 25</td><td class="price-cell">$753</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:51pm</td><td>7:25am+1</td><td>~18h 34m</td></tr>
+                            <tr data-date="Dec 25"><td>Dec 25</td><td class="price-cell">$753</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>6:29pm</td><td>10:15am+1</td><td>~15h 46m</td></tr>
+                            <tr data-date="Dec 27"><td>Dec 27</td><td class="price-cell">$556</td><td>EWR&rarr;PUJ&rarr;EZE</td><td><span class="airline-badge">Arajet</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>11:00am</td><td>3:45am+1</td><td>~16h 45m</td></tr>
+                            <tr data-date="Dec 27"><td>Dec 27</td><td class="price-cell">$753</td><td>EWR&rarr;ATL&rarr;EZE</td><td><span class="airline-badge">Delta</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:05pm</td><td>7:20am+1</td><td>~19h 15m</td></tr>
+                            <tr data-date="Dec 27"><td>Dec 27</td><td class="price-cell">$753</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:51pm</td><td>7:25am+1</td><td>~18h 34m</td></tr>
+                            <tr data-date="Dec 27"><td>Dec 27</td><td class="price-cell">$753</td><td>EWR&rarr;IAH&rarr;EZE</td><td><span class="airline-badge">United</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>2:20pm</td><td>7:20am+1</td><td>~17h</td></tr>
+                            <tr data-date="Dec 27"><td>Dec 27</td><td class="price-cell">$753</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>6:29pm</td><td>10:15am+1</td><td>~15h 46m</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$556</td><td>EWR&rarr;SDQ&rarr;EZE</td><td><span class="airline-badge">Arajet</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>11:00am</td><td>3:23am+1</td><td>~16h 23m</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$693</td><td>EWR&rarr;ATL&rarr;EZE</td><td><span class="airline-badge">Delta</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:05pm</td><td>7:20am+1</td><td>~19h 15m</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$693</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:51pm</td><td>7:25am+1</td><td>~18h 34m</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$693</td><td>EWR&rarr;IAH&rarr;EZE</td><td><span class="airline-badge">United</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>2:20pm</td><td>7:20am+1</td><td>~17h</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$693</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>6:29pm</td><td>10:15am+1</td><td>~15h 46m</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$693</td><td>EWR&rarr;IAH&rarr;EZE</td><td><span class="airline-badge">United</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>4:00pm</td><td>9:20am+1</td><td>~17h 20m</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$888</td><td>EWR&rarr;IAD&rarr;PTY&rarr;EZE</td><td><span class="airline-badge">UA/Copa</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>6:00am</td><td>1:04am+1</td><td>~19h 4m</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <!-- Business Outbound -->
-        <div class="cabin-business">
-            <div class="flight-table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Price</th>
-                            <th>Route</th>
-                            <th>Airline</th>
-                            <th>Stops</th>
-                            <th>Depart</th>
-                            <th>Arrive</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Dec 26</td>
-                            <td class="price-cell">$2,304</td>
-                            <td>JFK&rarr;MDE&rarr;EZE</td>
-                            <td><span class="airline-badge">Avianca</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>6:15am</td>
-                            <td>1:35am+1</td>
-                            <td>Good value biz</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$2,304</td>
-                            <td>JFK&rarr;MDE&rarr;EZE</td>
-                            <td><span class="airline-badge">Avianca</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>6:15am</td>
-                            <td>1:35am+1</td>
-                            <td>Good value biz</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$2,328</td>
-                            <td>EWR&rarr;SJO&rarr;UIO&rarr;EZE</td>
-                            <td><span class="airline-badge">UA/Avianca</span></td>
-                            <td><span class="stops-badge stops-2">2 stops</span></td>
-                            <td>8:19am</td>
-                            <td>5:10am+1</td>
-                            <td>Cheapest from EWR</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$2,384</td>
-                            <td>JFK&rarr;GRU&rarr;EZE</td>
-                            <td><span class="airline-badge">Delta</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>10:10pm</td>
-                            <td>3:50pm+1</td>
-                            <td>Delta One to S&atilde;o Paulo</td>
-                        </tr>
-                        <tr style="background: rgba(251, 191, 36, 0.08);">
-                            <td>Dec 26</td>
-                            <td class="price-cell">$2,434</td>
-                            <td>JFK&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-0">Nonstop</span></td>
-                            <td>10:00pm</td>
-                            <td>10:45am+1</td>
-                            <td style="color: var(--gold); font-weight: 600;">&#9733; NONSTOP 10h45m</td>
-                        </tr>
-                        <tr style="background: rgba(251, 191, 36, 0.08);">
-                            <td>Dec 28</td>
-                            <td class="price-cell">$2,434</td>
-                            <td>JFK&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-0">Nonstop</span></td>
-                            <td>10:00pm</td>
-                            <td>10:45am+1</td>
-                            <td style="color: var(--gold); font-weight: 600;">&#9733; NONSTOP 10h45m</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$2,438</td>
-                            <td>EWR&rarr;DFW&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>6:00am</td>
-                            <td>8:30am+1</td>
-                            <td>AA flagship to DFW</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$2,438</td>
-                            <td>EWR&rarr;IAH&rarr;EZE</td>
-                            <td><span class="airline-badge">United</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>8:00am</td>
-                            <td>9:20am+1</td>
-                            <td>Polaris to Houston</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 25</td>
-                            <td class="price-cell">$2,438</td>
-                            <td>EWR&rarr;MIA&rarr;EZE</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>12:51pm</td>
-                            <td>8:40am+1</td>
-                            <td>Christmas departure</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$3,134</td>
-                            <td>JFK&rarr;EZE</td>
-                            <td><span class="airline-badge">Delta</span></td>
-                            <td><span class="stops-badge stops-0">Nonstop</span></td>
-                            <td>9:20pm</td>
-                            <td>10:15am+1</td>
-                            <td>Delta One nonstop</td>
-                        </tr>
-                        <tr>
-                            <td>Dec 28</td>
-                            <td class="price-cell">$4,948</td>
-                            <td>EWR&rarr;ATL&rarr;EZE</td>
-                            <td><span class="airline-badge">Delta</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>5:30pm</td>
-                            <td>9:00am+1</td>
-                            <td>Delta One via ATL</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- BUSINESS OUTBOUND -->
+        <div id="out-business" style="display:none;">
+            <!-- Nonstop -->
+            <div class="sub-section-title nonstop">&#9679; Nonstop Flights</div>
+            <div class="flight-group" id="out-biz-nonstop">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Depart</th><th>Arrive</th><th>Duration</th><th>Notes</th></tr></thead>
+                        <tbody>
+                            <tr data-date="Dec 26" style="background: rgba(251, 191, 36, 0.08);"><td>Dec 26</td><td class="price-cell">$2,434</td><td>JFK&rarr;EZE</td><td><span class="airline-badge">AA 953</span></td><td>10:00pm</td><td>10:45am+1</td><td>10h 45m</td><td style="color: var(--gold); font-weight: 600;">&#9733; Best nonstop price</td></tr>
+                            <tr data-date="Dec 28" style="background: rgba(251, 191, 36, 0.08);"><td>Dec 28</td><td class="price-cell">$2,434</td><td>JFK&rarr;EZE</td><td><span class="airline-badge">AA 953</span></td><td>10:00pm</td><td>10:45am+1</td><td>10h 45m</td><td style="color: var(--gold); font-weight: 600;">&#9733; Best nonstop price</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$3,134</td><td>JFK&rarr;EZE</td><td><span class="airline-badge">Delta 115</span></td><td>9:20pm</td><td>10:15am+1</td><td>10h 55m</td><td>Delta One</td></tr>
+                            <tr data-date="Dec 26"><td>Dec 26</td><td class="price-cell">$5,544</td><td>JFK&rarr;EZE</td><td><span class="airline-badge">Delta 115</span></td><td>9:20pm</td><td>10:15am+1</td><td>10h 55m</td><td>Delta One (pricier on 12/26)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Connecting -->
+            <div class="sub-section-title connecting">&#9679; Connecting Flights</div>
+            <div class="flight-group" id="out-biz-connecting">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Stops</th><th>Depart</th><th>Arrive</th><th>Notes</th></tr></thead>
+                        <tbody>
+                            <tr data-date="Dec 26"><td>Dec 26</td><td class="price-cell">$2,304</td><td>JFK&rarr;MDE&rarr;EZE</td><td><span class="airline-badge">Avianca</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>6:15am</td><td>1:35am+1</td><td>Cheapest biz overall</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$2,304</td><td>JFK&rarr;MDE&rarr;EZE</td><td><span class="airline-badge">Avianca</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>6:15am</td><td>1:35am+1</td><td>Cheapest biz overall</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$2,328</td><td>EWR&rarr;SJO&rarr;UIO&rarr;EZE</td><td><span class="airline-badge">UA/Avianca</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>8:19am</td><td>5:10am+1</td><td>Cheapest from EWR</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$2,384</td><td>JFK&rarr;GRU&rarr;EZE</td><td><span class="airline-badge">Delta</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>10:10pm</td><td>3:50pm+1</td><td>Delta One via S&atilde;o Paulo</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$2,388</td><td>EWR&rarr;ATL&rarr;SCL&rarr;EZE</td><td><span class="airline-badge">Delta/LATAM</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>2:30pm</td><td>12:22pm+1</td><td></td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$2,438</td><td>EWR&rarr;DFW&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>6:00am</td><td>8:30am+1</td><td>AA Flagship via DFW</td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$2,438</td><td>EWR&rarr;IAH&rarr;EZE</td><td><span class="airline-badge">United</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>8:00am</td><td>9:20am+1</td><td>Polaris to Houston</td></tr>
+                            <tr data-date="Dec 25"><td>Dec 25</td><td class="price-cell">$2,438</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:51pm</td><td>8:40am+1</td><td>Christmas departure</td></tr>
+                            <tr data-date="Dec 27"><td>Dec 27</td><td class="price-cell">$2,438</td><td>EWR&rarr;ATL&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">DL/LATAM</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>2:30pm</td><td>9:40am+1</td><td></td></tr>
+                            <tr data-date="Dec 26"><td>Dec 26</td><td class="price-cell">$2,870</td><td>JFK&rarr;BOG&rarr;EZE</td><td><span class="airline-badge">Avianca</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:35am</td><td>3:50pm</td><td></td></tr>
+                            <tr data-date="Dec 26"><td>Dec 26</td><td class="price-cell">$2,955</td><td>JFK&rarr;PTY&rarr;EZE</td><td><span class="airline-badge">Copa</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>8:33am</td><td>1:04am+1</td><td></td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$3,188</td><td>EWR&rarr;MIA&rarr;EZE</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:51pm</td><td>7:25am+1</td><td></td></tr>
+                            <tr data-date="Dec 28"><td>Dec 28</td><td class="price-cell">$4,948</td><td>EWR&rarr;ATL&rarr;EZE</td><td><span class="airline-badge">Delta</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>5:30pm</td><td>9:00am+1</td><td>Delta One via ATL</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <!-- ============ RETURN FLIGHTS ============ -->
+        <!-- ============ RETURN ============ -->
         <div class="section-title"><span class="icon">&#9992;</span> Return: Montevideo (MVD) &rarr; NYC</div>
 
-        <!-- Economy Return -->
-        <div class="cabin-economy">
-            <div class="flight-table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Price</th>
-                            <th>Route</th>
-                            <th>Airline</th>
-                            <th>Stops</th>
-                            <th>Depart</th>
-                            <th>Arrive</th>
-                            <th>Duration</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$652</td>
-                            <td>MVD&rarr;MIA&rarr;DFW&rarr;EWR</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-2">2 stops</span></td>
-                            <td>10:30pm</td>
-                            <td>12:27am+2</td>
-                            <td>~26h (long DFW)</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 6</td>
-                            <td class="price-cell">$687</td>
-                            <td>MVD&rarr;SCL&rarr;MIA&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM/DL</span></td>
-                            <td><span class="stops-badge stops-2">2 stops</span></td>
-                            <td>7:21pm</td>
-                            <td>2:38pm+1</td>
-                            <td>~19h 17m</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$687</td>
-                            <td>MVD&rarr;LIM&rarr;MIA&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM/DL</span></td>
-                            <td><span class="stops-badge stops-2">2 stops</span></td>
-                            <td>5:55pm</td>
-                            <td>11:31am+1</td>
-                            <td>~17h 36m</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$841</td>
-                            <td>MVD&rarr;MIA&rarr;EWR</td>
-                            <td><span class="airline-badge">AA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>10:30pm</td>
-                            <td>9:23pm+1</td>
-                            <td>~22h 53m</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 6</td>
-                            <td class="price-cell">$817</td>
-                            <td>MVD&rarr;SCL&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:21pm</td>
-                            <td>9:30am+1</td>
-                            <td>~14h 9m</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 6</td>
-                            <td class="price-cell">$928</td>
-                            <td>MVD&rarr;LIM&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:35am</td>
-                            <td>8:10pm</td>
-                            <td>~12h 35m</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$808</td>
-                            <td>MVD&rarr;LIM&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:35am</td>
-                            <td>8:10pm</td>
-                            <td>~12h 35m</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 9</td>
-                            <td class="price-cell">$806</td>
-                            <td>MVD&rarr;EWR (various)</td>
-                            <td><span class="airline-badge">Various</span></td>
-                            <td><span class="stops-badge stops-1">1+ stops</span></td>
-                            <td>varies</td>
-                            <td>varies</td>
-                            <td>varies</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="filter-row" id="ret-filters">
+            <span class="filter-label">Date:</span>
+            <button class="filter-btn active" data-section="ret" data-date="all" onclick="setDate('ret','all',this)">All Dates</button>
+            <button class="filter-btn" data-section="ret" data-date="Jan 6" onclick="setDate('ret','Jan 6',this)">Jan 6</button>
+            <button class="filter-btn" data-section="ret" data-date="Jan 7" onclick="setDate('ret','Jan 7',this)">Jan 7</button>
+            <button class="filter-btn" data-section="ret" data-date="Jan 8" onclick="setDate('ret','Jan 8',this)">Jan 8</button>
+            <button class="filter-btn" data-section="ret" data-date="Jan 9" onclick="setDate('ret','Jan 9',this)">Jan 9</button>
+        </div>
+
+        <!-- ECONOMY RETURN -->
+        <div id="ret-economy">
+            <div class="sub-section-title nonstop">&#9679; Nonstop Flights</div>
+            <div class="flight-group">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Depart</th><th>Arrive</th><th>Duration</th></tr></thead>
+                        <tbody>
+                            <tr><td colspan="7" class="no-results">No nonstop economy flights from MVD on these dates</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sub-section-title connecting">&#9679; Connecting Flights</div>
+            <div class="flight-group">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Stops</th><th>Depart</th><th>Arrive</th><th>Duration</th></tr></thead>
+                        <tbody>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$652</td><td>MVD&rarr;MIA&rarr;DFW&rarr;EWR</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>10:30pm</td><td>12:27am+2</td><td>~26h (long DFW)</td></tr>
+                            <tr data-date="Jan 6"><td>Jan 6</td><td class="price-cell">$687</td><td>MVD&rarr;SCL&rarr;MIA&rarr;JFK</td><td><span class="airline-badge">LATAM/DL</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>7:21pm</td><td>2:38pm+1</td><td>~19h 17m</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$687</td><td>MVD&rarr;LIM&rarr;MIA&rarr;JFK</td><td><span class="airline-badge">LATAM/DL</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>5:55pm</td><td>11:31am+1</td><td>~17h 36m</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$808</td><td>MVD&rarr;LIM&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:35am</td><td>8:10pm</td><td>~12h 35m</td></tr>
+                            <tr data-date="Jan 6"><td>Jan 6</td><td class="price-cell">$817</td><td>MVD&rarr;SCL&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:21pm</td><td>9:30am+1</td><td>~14h 9m</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$841</td><td>MVD&rarr;MIA&rarr;EWR</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>10:30pm</td><td>9:23pm+1</td><td>~22h 53m</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$857</td><td>MVD&rarr;GRU&rarr;JFK</td><td><span class="airline-badge">Gol/AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>1:05pm</td><td>7:05am+1</td><td>~18h</td></tr>
+                            <tr data-date="Jan 6"><td>Jan 6</td><td class="price-cell">$928</td><td>MVD&rarr;LIM&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:35am</td><td>8:10pm</td><td>~12h 35m</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$985</td><td>MVD&rarr;MIA&rarr;EWR</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>10:30pm</td><td>11:44am+1</td><td>~13h 14m</td></tr>
+                            <tr data-date="Jan 9"><td>Jan 9</td><td class="price-cell">$806</td><td>MVD&rarr;EWR</td><td><span class="airline-badge">Various</span></td><td><span class="stops-badge stops-1">1+ stops</span></td><td>varies</td><td>varies</td><td>varies</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <!-- Business Return -->
-        <div class="cabin-business">
-            <div class="flight-table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Price</th>
-                            <th>Route</th>
-                            <th>Airline</th>
-                            <th>Stops</th>
-                            <th>Depart</th>
-                            <th>Arrive</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$2,454</td>
-                            <td>MVD&rarr;LIM&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:35am</td>
-                            <td>8:10pm</td>
-                            <td>Same-day arrival!</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$2,454</td>
-                            <td>MVD&rarr;LIM&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>5:55pm</td>
-                            <td>8:15am+1</td>
-                            <td>Evening departure</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$2,460</td>
-                            <td>MVD&rarr;LIM&rarr;ATL&rarr;EWR</td>
-                            <td><span class="airline-badge">LATAM/DL</span></td>
-                            <td><span class="stops-badge stops-2">2 stops</span></td>
-                            <td>5:55pm</td>
-                            <td>11:03am+1</td>
-                            <td>Good price to EWR</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$2,529</td>
-                            <td>MVD&rarr;PTY&rarr;EWR</td>
-                            <td><span class="airline-badge">Copa/UA</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>12:53am</td>
-                            <td>4:53am</td>
-                            <td>Red-eye to EWR</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 6</td>
-                            <td class="price-cell">$2,577</td>
-                            <td>MVD&rarr;LIM&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:35am</td>
-                            <td>8:10pm</td>
-                            <td>Same-day, depart earlier</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 6</td>
-                            <td class="price-cell">$2,583</td>
-                            <td>MVD&rarr;SCL&rarr;ATL&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM/DL</span></td>
-                            <td><span class="stops-badge stops-2">2 stops</span></td>
-                            <td>7:21pm</td>
-                            <td>11:14am+1</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Jan 7</td>
-                            <td class="price-cell">$2,454</td>
-                            <td>MVD&rarr;LIM&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:35am</td>
-                            <td>8:15am+1</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$2,830</td>
-                            <td>MVD&rarr;BOG&rarr;JFK</td>
-                            <td><span class="airline-badge">Avianca</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:05am</td>
-                            <td>10:45pm</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$3,035</td>
-                            <td>MVD&rarr;PTY&rarr;JFK</td>
-                            <td><span class="airline-badge">Copa</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>2:31am</td>
-                            <td>5:17pm</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Jan 8</td>
-                            <td class="price-cell">$3,529</td>
-                            <td>MVD&rarr;SCL&rarr;JFK</td>
-                            <td><span class="airline-badge">LATAM</span></td>
-                            <td><span class="stops-badge stops-1">1 stop</span></td>
-                            <td>7:21pm</td>
-                            <td>9:30am+1</td>
-                            <td>LATAM direct SCL-JFK</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- BUSINESS RETURN -->
+        <div id="ret-business" style="display:none;">
+            <div class="sub-section-title nonstop">&#9679; Nonstop Flights</div>
+            <div class="flight-group">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Depart</th><th>Arrive</th><th>Duration</th></tr></thead>
+                        <tbody>
+                            <tr><td colspan="7" class="no-results">No nonstop business flights from MVD &mdash; all routes connect</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sub-section-title connecting">&#9679; Connecting Flights</div>
+            <div class="flight-group">
+                <div class="flight-table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Price</th><th>Route</th><th>Airline</th><th>Stops</th><th>Depart</th><th>Arrive</th><th>Notes</th></tr></thead>
+                        <tbody>
+                            <tr data-date="Jan 7"><td>Jan 7</td><td class="price-cell">$2,454</td><td>MVD&rarr;LIM&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:35am</td><td>8:15am+1</td><td></td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$2,454</td><td>MVD&rarr;LIM&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:35am</td><td>8:10pm</td><td>Same-day arrival!</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$2,454</td><td>MVD&rarr;LIM&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>5:55pm</td><td>8:15am+1</td><td>Evening departure</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$2,460</td><td>MVD&rarr;LIM&rarr;ATL&rarr;EWR</td><td><span class="airline-badge">LATAM/DL</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>5:55pm</td><td>11:03am+1</td><td>Best price to EWR</td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$2,529</td><td>MVD&rarr;PTY&rarr;EWR</td><td><span class="airline-badge">Copa/UA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>12:53am</td><td>4:53am</td><td>Red-eye</td></tr>
+                            <tr data-date="Jan 6"><td>Jan 6</td><td class="price-cell">$2,577</td><td>MVD&rarr;LIM&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:35am</td><td>8:10pm</td><td>Same-day arrival</td></tr>
+                            <tr data-date="Jan 6"><td>Jan 6</td><td class="price-cell">$2,583</td><td>MVD&rarr;SCL&rarr;ATL&rarr;JFK</td><td><span class="airline-badge">LATAM/DL</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>7:21pm</td><td>11:14am+1</td><td></td></tr>
+                            <tr data-date="Jan 6"><td>Jan 6</td><td class="price-cell">$2,583</td><td>MVD&rarr;SCL&rarr;ATL&rarr;EWR</td><td><span class="airline-badge">LATAM/DL</span></td><td><span class="stops-badge stops-2">2 stops</span></td><td>7:21pm</td><td>3:03pm+1</td><td></td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$2,830</td><td>MVD&rarr;BOG&rarr;JFK</td><td><span class="airline-badge">Avianca</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:05am</td><td>10:45pm</td><td></td></tr>
+                            <tr data-date="Jan 7"><td>Jan 7</td><td class="price-cell">$3,035</td><td>MVD&rarr;PTY&rarr;JFK</td><td><span class="airline-badge">Copa</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>10:26am</td><td>11:46pm</td><td></td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$3,035</td><td>MVD&rarr;PTY&rarr;JFK</td><td><span class="airline-badge">Copa</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>2:31am</td><td>5:17pm</td><td></td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$3,529</td><td>MVD&rarr;SCL&rarr;JFK</td><td><span class="airline-badge">LATAM</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>7:21pm</td><td>9:30am+1</td><td>LATAM direct SCL-JFK</td></tr>
+                            <tr data-date="Jan 6"><td>Jan 6</td><td class="price-cell">$4,058</td><td>MVD&rarr;MIA&rarr;JFK</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>10:30pm</td><td>1:00pm+1</td><td></td></tr>
+                            <tr data-date="Jan 8"><td>Jan 8</td><td class="price-cell">$6,337</td><td>MVD&rarr;MIA&rarr;JFK</td><td><span class="airline-badge">AA</span></td><td><span class="stops-badge stops-1">1 stop</span></td><td>10:30pm</td><td>1:00pm+1</td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div class="note-box">
-            <strong>Internal flights note:</strong> You'll also need BA domestic flights: Buenos Aires (EZE/AEP) &rarr; Mendoza (MDZ) on ~Dec 30, and Mendoza &rarr; Montevideo or Buenos Aires on ~Jan 2. Aerol&iacute;neas Argentinas and LATAM operate these routes. The Jos&eacute; Ignacio leg from Mendoza would go via Buenos Aires (AEP/EZE) and then a short drive or connection to Montevideo/Punta del Este area.
+            <strong>Internal flights note:</strong> You'll also need BA domestic flights: Buenos Aires (EZE/AEP) &rarr; Mendoza (MDZ) on ~Dec 30, and Mendoza &rarr; Montevideo or Buenos Aires on ~Jan 2. Aerol&iacute;neas Argentinas and LATAM operate these routes. The Jos&eacute; Ignacio leg from Mendoza would go via Buenos Aires (AEP/EZE) then a drive or connection to the Punta del Este area.
         </div>
     </div>
 
@@ -928,10 +507,44 @@
     </footer>
 
     <script>
+        let currentCabin = 'economy';
+        let dateFilters = { out: 'all', ret: 'all' };
+
         function setCabin(cabin) {
-            document.body.classList.toggle('show-business', cabin === 'business');
-            document.querySelectorAll('.toggle-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.toLowerCase() === cabin);
+            currentCabin = cabin;
+            document.querySelectorAll('.filter-row:first-of-type .filter-btn, .filter-row .filter-btn').forEach(b => {
+                if (b.textContent === 'Economy' || b.textContent === 'Business') {
+                    b.classList.toggle('active', b.textContent.toLowerCase() === cabin);
+                }
+            });
+            // Toggle picks
+            document.getElementById('picks-economy').style.display = cabin === 'economy' ? '' : 'none';
+            document.getElementById('picks-business').style.display = cabin === 'business' ? '' : 'none';
+            // Toggle flight sections
+            document.getElementById('out-economy').style.display = cabin === 'economy' ? '' : 'none';
+            document.getElementById('out-business').style.display = cabin === 'business' ? '' : 'none';
+            document.getElementById('ret-economy').style.display = cabin === 'economy' ? '' : 'none';
+            document.getElementById('ret-business').style.display = cabin === 'business' ? '' : 'none';
+        }
+
+        function setDate(section, date, btn) {
+            dateFilters[section] = date;
+            // Update button states
+            const filterRow = document.getElementById(section === 'out' ? 'out-filters' : 'ret-filters');
+            filterRow.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            // Filter rows in both economy and business tables for this section
+            const prefixes = section === 'out' ? ['out-economy', 'out-business'] : ['ret-economy', 'ret-business'];
+            prefixes.forEach(prefix => {
+                const container = document.getElementById(prefix);
+                if (!container) return;
+                container.querySelectorAll('tbody tr[data-date]').forEach(row => {
+                    if (date === 'all' || row.dataset.date === date) {
+                        row.classList.remove('hidden');
+                    } else {
+                        row.classList.add('hidden');
+                    }
+                });
             });
         }
     </script>
